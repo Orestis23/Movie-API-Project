@@ -25,6 +25,27 @@ public class MoviesPojo {
 		// TODO Auto-generated constructor stub
 	}
 
+	public MoviesPojo(Integer id, String title, Integer year, String rated, String genre, String plot, MovieUser user) {
+		super();
+		this.id = id;
+		this.title = title;
+		this.year = year;
+		this.rated = rated;
+		this.genre = genre;
+		this.plot = plot;
+		this.user = user;
+	}
+
+	public MoviesPojo(String title, Integer year, String rated, String genre, String plot, MovieUser user) {
+		super();
+		this.title = title;
+		this.year = year;
+		this.rated = rated;
+		this.genre = genre;
+		this.plot = plot;
+		this.user = user;
+	}
+
 	public String getTitle() {
 		return title;
 	}

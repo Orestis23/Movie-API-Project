@@ -19,6 +19,7 @@ public class MovieUser {
 	private String name;
 	@OneToMany(mappedBy="user")
 	List<MoviesPojo> movies;
+	
 	public MovieUser(Integer id, String email, String name, List<MoviesPojo> movies) {
 		super();
 		Id = id;
