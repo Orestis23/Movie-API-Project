@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class MoviesPojo {
@@ -16,6 +17,8 @@ public class MoviesPojo {
 	private String rated;
 	private String genre;
 	private String plot;
+	@ManyToOne
+	MovieUser user;
 	
 	public MoviesPojo() {
 		super();
