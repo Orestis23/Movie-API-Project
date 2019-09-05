@@ -46,6 +46,22 @@ public class MoviesPojo {
 		this.user = user;
 	}
 
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public MovieUser getUser() {
+		return user;
+	}
+
+	public void setUser(MovieUser user) {
+		this.user = user;
+	}
+
 	public String getTitle() {
 		return title;
 	}

@@ -27,6 +27,15 @@ public class MovieUser {
 		this.name = name;
 		this.movies = movies;
 	}
+	
+	
+	public MovieUser(String email, String name) {
+		super();
+		this.email = email;
+		this.name = name;
+	}
+
+
 	public MovieUser() {
 		super();
 		// TODO Auto-generated constructor stub

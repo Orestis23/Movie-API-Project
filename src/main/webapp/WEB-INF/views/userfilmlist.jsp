@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,6 +13,7 @@
 
 	<center><h1>IMDb Full Movie List</h1></center>
 
+<div class="container">
   <table class="table">
     <tr>
 
@@ -23,18 +27,20 @@
       
     </tr>
     
-    <tr>
-      <td>Film Title</td>
-      <td>Film Plot</td>
-      <td>Film Genre</td>
-      <td>Film Rating</td> 
-      <td>Film Release Year</td> 
-      <td> <a class="btn btn-primary" href="details?id=${d.id }">Add to Favorites</a>
-    </tr>
+    <c:forEach var="d" items="${List }">
+				<tr>
+					<td>${d.title }</td>
+					<td>${d.plot }</td>
+					<td>${d.genre }</td>
+					<td>${d.rated }</td>
+					<td>${d.year }</td>
+					<td></td>
+				</tr>
+			</c:forEach>
     
   </table>
-
-<a class="btn btn-primary" href="details?id=${d.id }">Back to Film Manager</a>
+</div>
+<%-- <a class="btn btn-primary" href="details?id=${d.id }">Back to Film Manager</a> --%>
 
 
 </body>

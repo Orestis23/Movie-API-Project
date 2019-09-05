@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,20 +25,22 @@
       
     </tr>
     
-    <tr>
-      <td>Film Title</td>
-      <td>Film Plot</td>
-      <td>Film Genre</td>
-      <td>Film Rating</td> 
-      <td>Film Release Year</td> 
-      <td> <a class="btn btn-primary" href="details?id=${d.id }">Add to Favorites</a>
-    </tr>
-    
+
+   <%--  <c:forEach var="d" items="${id }"> --%>
+				<tr>
+					<td>${d.title }</td>
+					<td>${d.plot }</td>
+					<td>${d.genre }</td>
+					<td>${d.rated }</td>
+					<td>${d.year }</td>
+					<td> <a class="btn btn-primary" href="add-list?title=${d.title}&plot=${d.plot}&genre=${d.genre}&rated=${d.rated}&year=${year}" >Add to Favorites</a>
+				</tr>
+	<%-- 		</c:forEach> --%>
   </table>
 
-<a class="btn btn-primary" href="details?id=${d.id }">Back to Film Manager</a>
+<%-- <a class="btn btn-primary" href="details?id=${d}">Your Info</a> --%>
 
-<a class="btn btn-primary" href="details?id=${d.id }">View Your Favorites</a>
+<a href="display-list"class="button">View Your Favorites</a>
 
 </body>
 </html>
